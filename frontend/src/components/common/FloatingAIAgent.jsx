@@ -142,7 +142,7 @@ export default function FloatingAIAgent() {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [dragTarget, isMinimizedPinned, minimizedPosition.x, minimizedPosition.y]);
+  }, [dragTarget, isMinimizedPinned, minimizedPosition]);
 
   useEffect(() => {
     const handleResize = () => {
