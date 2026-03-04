@@ -61,6 +61,8 @@ export function useAuth() {
     } catch (error) {
       console.warn('Logout API error:', error);
     } finally {
+      // Reset floating AI widget position on logout
+      localStorage.removeItem('lifewood_floating_ai_position');
       // Always clear local state
       contextLogout();
       setLoading(false);

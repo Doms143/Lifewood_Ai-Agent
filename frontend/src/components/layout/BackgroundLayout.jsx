@@ -1,4 +1,5 @@
 import React from 'react';
+import FloatingAIAgent from '../common/FloatingAIAgent';
 
 export default function BackgroundLayout({ children }) {
   return (
@@ -12,6 +13,7 @@ export default function BackgroundLayout({ children }) {
       <div className="relative z-10">
         {children}
       </div>
+      <FloatingAIAgent />
     </div>
   );
 }

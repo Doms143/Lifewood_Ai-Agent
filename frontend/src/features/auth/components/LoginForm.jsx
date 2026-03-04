@@ -8,6 +8,8 @@ export default function LoginForm({ onClose }) {
   const [accountPass, setAccountPass] = useState('');
   const [error, setError] = useState('');
   const { login, loading } = useAuth();
+  const solidInputClass =
+    'bg-white/95 hover:bg-white border-lifewood-castletonGreen/20';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +39,7 @@ export default function LoginForm({ onClose }) {
         onChange={(e) => setAccountID(e.target.value)}
         icon={User}
         autoComplete="username"
+        className={solidInputClass}
       />
 
       <Input
@@ -47,6 +50,7 @@ export default function LoginForm({ onClose }) {
         onChange={(e) => setAccountPass(e.target.value)}
         icon={Lock}
         autoComplete="current-password"
+        className={solidInputClass}
       />
 
       <div className="flex gap-2 sm:gap-3 pt-1 sm:pt-2">

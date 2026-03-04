@@ -55,7 +55,9 @@ export default function LandingPage() {
             draggable={false}
           />
         </div>
-
+git checkout --ours -- frontend/src/pages/LandingPage.jsx
+git add frontend/src/pages/LandingPage.jsx
+git commit -m "Resolve merge: keep current LandingPage edits"
         {/* Center — Form area */}
         <div className="flex-1 flex items-center">
           <div className="w-full max-w-[600px] mx-auto animate-fade-up" style={{ animationDelay: '80ms' }}>
@@ -167,11 +169,18 @@ export default function LandingPage() {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Center hero text */}
           <div className="max-w-lg animate-fade-up" style={{ animationDelay: '150ms' }}>
             <h2 className="text-white text-4xl xl:text-5xl font-bold leading-tight tracking-tight mb-4">
               ExpenseAI <br />Intelligence<br />
               <span className="text-lifewood-saffaron">Assitant</span>
+=======
+          {/* Welcome heading */}
+          <div className="relative z-20 mb-8">
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-lifewood-darkSerpent">
+              {activeForm === 'login' ? 'Welcome' : 'Request Access'}
+>>>>>>> c77685334b08627b09f45bebbf6ebaea0a209976
             </h2>
             <p className="text-white/90 text-[15px] leading-relaxed max-w-md">
               AI-powered receipt scanning, automated categorization, and real-time
@@ -179,6 +188,7 @@ export default function LandingPage() {
             </p>
           </div>
 
+<<<<<<< HEAD
           {/* Bottom features row */}
           <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '300ms' }}>
             {[
@@ -196,6 +206,30 @@ export default function LandingPage() {
                 {text}
               </div>
             ))}
+=======
+          {/* Tab switcher */}
+          <div className="relative z-20 inline-flex rounded-xl bg-lifewood-paper p-1 mb-8 border border-lifewood-platinum w-full">
+            <button
+              onClick={() => setActiveForm('login')}
+              className={`flex-1 py-3 text-base font-semibold rounded-lg transition-all duration-200 active:scale-[0.97] ${
+                activeForm === 'login'
+                    ? 'bg-lifewood-castletonGreen text-white shadow-sm'
+                    : 'text-lifewood-darkSerpent hover:text-lifewood-darkSerpent hover:bg-white/80'
+              }`}
+            >
+              Sign In
+            </button>
+            <button
+              onClick={() => setActiveForm('register')}
+              className={`flex-1 py-3 text-base font-semibold rounded-lg transition-all duration-200 active:scale-[0.97] ${
+                  activeForm === 'register'
+                    ? 'bg-lifewood-castletonGreen text-white shadow-sm'
+                    : 'text-lifewood-darkSerpent hover:text-lifewood-darkSerpent hover:bg-white/80'
+              }`}
+            >
+              Request Account
+            </button>
+>>>>>>> c77685334b08627b09f45bebbf6ebaea0a209976
           </div>
         </div>
 
